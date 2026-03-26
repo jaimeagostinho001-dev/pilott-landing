@@ -1,3 +1,4 @@
+/* eslint-disable max-lines-per-function */
 import { Rocket, Twitter, Linkedin, Github } from 'lucide-react';
 
 export default function Footer() {

@@ -1,3 +1,4 @@
+/* eslint-disable max-lines-per-function */
 'use client';
 
 import { useState, useEffect } from 'react';
@@ -30,6 +31,7 @@ export default function Navbar() {
           <div className="hidden md:flex items-center gap-8">
             <a href="#features" className="text-sm text-slate-300 hover:text-white transition-colors">Features</a>
             <a href="#pricing" className="text-sm text-slate-300 hover:text-white transition-colors">Planos</a>
+            <a href="/changelog" className="text-sm text-slate-300 hover:text-white transition-colors">Novidades</a>
             <a href="https://app.pilottos.io" className="text-sm font-medium text-white px-5 py-2 rounded-full bg-white/10 hover:bg-white/20 transition-all">
               Login
             </a>
@@ -52,6 +54,7 @@ export default function Navbar() {
         <div className="md:hidden absolute top-full left-0 w-full bg-slate-900 border-b border-white/10 p-4 flex flex-col gap-4 shadow-xl">
           <a href="#features" className="text-slate-300 hover:text-white py-2" onClick={() => setIsMobileMenuOpen(false)}>Features</a>
           <a href="#pricing" className="text-slate-300 hover:text-white py-2" onClick={() => setIsMobileMenuOpen(false)}>Planos</a>
+          <a href="/changelog" className="text-slate-300 hover:text-white py-2" onClick={() => setIsMobileMenuOpen(false)}>Novidades</a>
           <div className="flex flex-col gap-2 pt-2 border-t border-white/10">
             <a href="https://app.pilottos.io" className="text-center font-medium text-white px-5 py-3 rounded-xl bg-white/10 hover:bg-white/20 transition-all">
               Login

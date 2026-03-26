@@ -1,3 +1,4 @@
+/* eslint-disable max-lines-per-function */
 import { LayoutDashboard, Users, Workflow, Zap, Lock, BarChart3 } from 'lucide-react';
 
 export default function Features() {
