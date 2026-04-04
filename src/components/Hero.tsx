@@ -43,7 +43,7 @@ export default function Hero() {
           transition={{ duration: 0.5, delay: 0.2 }}
           className="max-w-2xl mx-auto text-lg md:text-xl text-slate-400 mb-10 leading-relaxed"
         >
-          O Sistema Operacional desenhado para empresas B2B. Centralizamos CRM, pipelines de vendas e gestão operacional inteligente para automatizar decisões e impulsionar resultados.
+          O Sistema Operacional Soberano desenhado para empresas B2B. Orquestre Personas Multi-Modelos, unifique o fluxo Omnichannel e escale com governança Human-in-the-Loop.
         </motion.p>
 
         <motion.div
@@ -74,11 +74,21 @@ export default function Hero() {
           transition={{ duration: 0.7, delay: 0.5 }}
           className="relative max-w-5xl mx-auto rounded-xl sm:rounded-2xl border border-white/10 bg-slate-900/50 backdrop-blur-xl p-2 sm:p-4 shadow-2xl overflow-hidden before:absolute before:-inset-2 before:bg-gradient-to-b before:from-white/5 before:to-transparent before:pointer-events-none before:rounded-2xl"
         >
-          <img 
-            src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=2670&auto=format&fit=crop" 
-            alt="Interface do Pilott OS" 
-            className="rounded-lg sm:rounded-xl opacity-70 border border-white/5 w-full object-cover aspect-[16/9]"
-          />
+          <div className="relative w-full aspect-[16/9] bg-slate-800 rounded-lg sm:rounded-xl overflow-hidden border border-white/5">
+            <img 
+              src="/images/cockpit-hero.png" 
+              alt="Interface do Cockpit Pilott OS" 
+              className="w-full h-full object-cover opacity-90 transition-opacity hover:opacity-100"
+              onError={(e) => {
+                e.currentTarget.src = "https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=2670&auto=format&fit=crop";
+                e.currentTarget.style.filter = "grayscale(100%) blur(4px)";
+              }}
+            />
+            {/* Fallback visual indicator when real image is missing */}
+            <div className="absolute inset-0 flex items-center justify-center text-slate-400 font-mono text-sm mix-blend-difference opacity-50 pointer-events-none">
+              [PRINT REAL COCKPIT /images/cockpit-hero.png]
+            </div>
+          </div>
           
           {/* Dashboard overlay mocks */}
           <div className="absolute top-10 -left-6 md:-left-12 px-4 py-3 bg-slate-800/90 backdrop-blur-md rounded-xl border border-white/10 shadow-2xl flex items-center gap-3 animate-bounce shadow-blue-500/10" style={{ animationDuration: '3s' }}>
@@ -86,18 +96,18 @@ export default function Hero() {
               <Activity className="w-5 h-5 text-emerald-400" />
             </div>
             <div className="text-left">
-              <p className="text-xs text-slate-400 font-medium tracking-wide">Conversão</p>
-              <p className="text-lg text-white font-bold">+28.4%</p>
+              <p className="text-xs text-slate-400 font-medium tracking-wide">Takeovers Hoje</p>
+              <p className="text-lg text-white font-bold">14 H.I.T.L.</p>
             </div>
           </div>
           
           <div className="absolute bottom-20 -right-6 md:-right-10 px-4 py-3 bg-slate-800/90 backdrop-blur-md rounded-xl border border-white/10 shadow-2xl flex items-center gap-3 animate-bounce shadow-purple-500/10" style={{ animationDuration: '4s', animationDelay: '1s' }}>
             <div className="bg-purple-500/20 p-2 rounded-lg">
-              <Database className="w-5 h-5 text-purple-400" />
+              <Cpu className="w-5 h-5 text-purple-400" />
             </div>
             <div className="text-left">
-              <p className="text-xs text-slate-400 font-medium tracking-wide">Pipelines Ativos</p>
-              <p className="text-lg text-white font-bold">144</p>
+              <p className="text-xs text-slate-400 font-medium tracking-wide">Agentes Ativos</p>
+              <p className="text-lg text-white font-bold">8 Motores</p>
             </div>
           </div>
         </motion.div>

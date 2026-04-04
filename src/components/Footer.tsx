@@ -1,5 +1,6 @@
 /* eslint-disable max-lines-per-function */
-import { Rocket, Twitter, Linkedin, Github } from 'lucide-react';
+import { Twitter, Linkedin, Github } from 'lucide-react';
+import Logo from './Logo';
 
 export default function Footer() {
   return (
@@ -8,9 +9,7 @@ export default function Footer() {
         <div className="flex flex-col lg:flex-row justify-between items-center lg:items-start gap-12 mb-16">
           <div className="max-w-xs text-center lg:text-left">
             <div className="flex items-center justify-center lg:justify-start gap-2 mb-6">
-              <div className="w-8 h-8 rounded-lg bg-blue-600 flex items-center justify-center">
-                <Rocket className="w-5 h-5 text-white" />
-              </div>
+              <Logo className="w-8 h-8" />
               <span className="text-xl font-bold tracking-tight text-white">Pilott<span className="text-blue-500">OS</span></span>
             </div>
             <p className="text-slate-400 text-sm">
