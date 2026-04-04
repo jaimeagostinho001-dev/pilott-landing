@@ -75,18 +75,17 @@ export default function Hero() {
           className="relative max-w-5xl mx-auto rounded-xl sm:rounded-2xl border border-white/10 bg-slate-900/50 backdrop-blur-xl p-2 sm:p-4 shadow-2xl overflow-hidden before:absolute before:-inset-2 before:bg-gradient-to-b before:from-white/5 before:to-transparent before:pointer-events-none before:rounded-2xl"
         >
           <div className="relative w-full aspect-[16/9] bg-slate-800 rounded-lg sm:rounded-xl overflow-hidden border border-white/5">
+            {/* Imagem de mock Unsplash até a real ser inserida */}
             <img 
-              src="/images/cockpit-hero.png" 
+              src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=2670&auto=format&fit=crop" 
               alt="Interface do Cockpit Pilott OS" 
-              className="w-full h-full object-cover opacity-90 transition-opacity hover:opacity-100"
-              onError={(e) => {
-                e.currentTarget.src = "https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=2670&auto=format&fit=crop";
-                e.currentTarget.style.filter = "grayscale(100%) blur(4px)";
-              }}
+              className="w-full h-full object-cover opacity-60 transition-opacity hover:opacity-80 grayscale blur-[2px]"
             />
-            {/* Fallback visual indicator when real image is missing */}
-            <div className="absolute inset-0 flex items-center justify-center text-slate-400 font-mono text-sm mix-blend-difference opacity-50 pointer-events-none">
-              [PRINT REAL COCKPIT /images/cockpit-hero.png]
+            {/* Aviso central de substituição para o Desenvolvedor/Usuário */}
+            <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
+              <div className="bg-slate-950/80 px-4 py-2 rounded-lg border border-slate-800 text-slate-300 font-mono text-sm uppercase tracking-widest backdrop-blur-sm">
+                [Adicione a print: /public/images/cockpit-hero.png]
+              </div>
             </div>
           </div>
           

@@ -60,9 +60,12 @@ export default function Features() {
               </p>
               
               {/* O Placeholder para pequenas vitrines (substituir dps por prints ou SVG diagramas das funções) */}
-              <div className="mt-6 w-full h-32 rounded bg-slate-900/50 border border-slate-700/30 overflow-hidden relative grayscale opacity-30 group-hover:grayscale-0 group-hover:opacity-100 transition-all">
-                  <img src={`/images/feature-mock-${i+1}.png`} alt={`Módulo ${feature.title}`} className="w-full h-full object-cover" />
-                  <div className="absolute inset-0 flex items-center justify-center text-[10px] text-slate-600 font-mono tracking-widest uppercase bg-slate-950/80">Requer Print Real</div>
+              <div className="mt-6 w-full h-32 rounded bg-slate-900/50 border border-slate-700/30 overflow-hidden relative grayscale opacity-30 group-hover:grayscale-0 group-hover:opacity-100 transition-all flex items-center justify-center">
+                  {/* Descomentar a tag img abaixo quando tiver as imagens na pasta public/images/ */}
+                  {/* <img src={`/images/feature-mock-${i+1}.png`} alt={`Módulo ${feature.title}`} className="w-full h-full object-cover" /> */}
+                  <div className="text-[10px] text-slate-500 font-mono tracking-widest uppercase text-center px-4">
+                    Requer Print Real<br/>(/images/feature-mock-{i+1}.png)
+                  </div>
               </div>
             </div>
           ))}
